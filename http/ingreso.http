@@ -34,3 +34,9 @@ GET http://localhost:8080/ingreso/list
 Content-Type: application/json
 X-Forwarded-For: 192.0.0.1
 
+###
+
+GET http://localhost:8080/ingreso/total/0
+Content-Type: application/json
+X-Forwarded-For: 192.0.0.1
+

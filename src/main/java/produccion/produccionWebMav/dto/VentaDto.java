@@ -1,40 +1,24 @@
-package produccion.produccionWebMav.entity;
+package produccion.produccionWebMav.dto;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "venta")
-public class Venta {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "ven_id")
-    private int ventaId;
+public class VentaDto {
 
     private String concepto;
     private BigDecimal total;
     private LocalDateTime fecha;
     private int productoId;
 
-    public Venta(){
+    public VentaDto(){
+
     }
 
-    public Venta(String concepto, BigDecimal total, LocalDateTime fecha, int productoId) {
+    public VentaDto(String concepto, BigDecimal total, LocalDateTime fecha, int productoId) {
         this.concepto = concepto;
         this.total = total;
         this.fecha = fecha;
         this.productoId = productoId;
-    }
-
-    public int getVentaId() {
-        return ventaId;
-    }
-
-    public void setVentaId(int ventaId) {
-        this.ventaId = ventaId;
     }
 
     public String getConcepto() {

@@ -1,0 +1,40 @@
+POST http://localhost:8080/venta
+Content-Type: application/json
+X-Forwarded-For: 192.0.0.1
+
+{
+  "concepto": "venta",
+  "total": 50,
+  "fecha": "2016-01-25T21:34:55"
+}
+
+###
+
+PUT http://localhost:8080/venta/1
+Content-Type: application/json
+X-Forwarded-For: 192.0.0.1
+
+{
+  "fecha": "2016-01-25T21:34:55",
+  "importe": 60,
+  "ingresoVenta": false,
+  "socioId": 1
+}
+
+###
+
+DELETE http://localhost:8080/venta/3
+Content-Type: application/json
+X-Forwarded-For: 192.0.0.1
+
+###
+
+GET http://localhost:8080/venta/list
+Content-Type: application/json
+X-Forwarded-For: 192.0.0.1
+
+###
+
+GET http://localhost:8080/venta/total
+Content-Type: application/json
+X-Forwarded-For: 192.0.0.1

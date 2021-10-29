@@ -1,6 +1,5 @@
 package produccion.produccionWebMav.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,14 +7,18 @@ import produccion.produccionWebMav.dto.IngresoDto;
 import produccion.produccionWebMav.entity.Ingreso;
 import produccion.produccionWebMav.service.IngresoService;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
 @RequestMapping("/ingreso")
 public class IngresoController {
 
-    @Autowired
-    private IngresoService ingresoService;
+    private final IngresoService ingresoService;
+
+    public IngresoController(IngresoService ingresoService) {
+        this.ingresoService = ingresoService;
+    }
 
     @PostMapping()
     public ResponseEntity<Integer> create(@RequestBody IngresoDto dto){
@@ -33,6 +36,16 @@ public class IngresoController {
     @GetMapping("/list")
     public ResponseEntity<List<Ingreso>> findAll(){
         return new ResponseEntity(ingresoService.findAll(), HttpStatus.OK);
+    }
+
+    @GetMapping("/total/{socId}")
+    public ResponseEntity<BigDecimal> ingresoPorSocio(@PathVariable("socId") int socId){
+        return new ResponseEntity(ingresoService.ingresoPorSocio(socId), HttpStatus.OK);
+    }
+
+    @GetMapping("/total")
+    public ResponseEntity<BigDecimal> totalIngresos(){
+        return new ResponseEntity(ingresoService.totalIngresos(), HttpStatus.OK);
     }
 
 }
