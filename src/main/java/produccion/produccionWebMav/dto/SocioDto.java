@@ -1,44 +1,26 @@
-package produccion.produccionWebMav.entity;
+package produccion.produccionWebMav.dto;
 
-import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "socio")
-public class Socio {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "soc_id")
-    private int socId;
+public class SocioDto {
 
     private String nombre;
     private LocalDateTime fechaNac;
-    private String urlImage;
+    private String contentImage;
     private String telefono;
     private String celular;
     private boolean registrarIngreso;
 
-    public Socio(){
-
+    public SocioDto(){
     }
 
-    public Socio(String nombre, LocalDateTime fechaNac, String urlImage, String telefono, String celular, boolean registrarIngreso) {
+    public SocioDto(String nombre, LocalDateTime fechaNac, String contentImage, String telefono, String celular, boolean registrarIngreso) {
         this.nombre = nombre;
         this.fechaNac = fechaNac;
-        this.urlImage = urlImage;
+        this.contentImage = contentImage;
         this.telefono = telefono;
         this.celular = celular;
         this.registrarIngreso = registrarIngreso;
-    }
-
-    public int getSocId() {
-        return socId;
-    }
-
-    public void setSocId(int socId) {
-        this.socId = socId;
     }
 
     public String getNombre() {
@@ -57,12 +39,12 @@ public class Socio {
         this.fechaNac = fechaNac;
     }
 
-    public String getUrlImage() {
-        return urlImage;
+    public String getContentImage() {
+        return contentImage;
     }
 
-    public void setUrlImage(String urlImage) {
-        this.urlImage = urlImage;
+    public void setContentImage(String contentImage) {
+        this.contentImage = contentImage;
     }
 
     public String getTelefono() {

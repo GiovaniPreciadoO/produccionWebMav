@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sylvan-overview-330520",
+  "private_key_id": "ec98db3c4614553b32e73124112275bdaba89880",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCyGGcuOoFb0J/P\nSXB1gRYEqiwwsZ7Nxku7S9PWfJHzy9hkVlM/LN84AJ44AkYBfDGplsR9Mu3l/yys\nCoAXW3vEqTa5O9ymT4SDemZf+RGMFqWd+a9G7VNfUbQ1b+xf3F5Vr4A1YJGRg/VC\nikNK605DlqB+XiSZLottn+pihR5OptABInXB0SgZkVFZpdWPNT2dB1AkdWibJnz2\nI8UOWKJQQt1HjXkJhYKM7aaihDQjAQC+/mgk7HRLdeP7bRw7ltx25wKdhz4byBpf\nTNITcsIU1CjiOpP3YB5CER23qPC+SGA/8WWnYkCxvcJcRqSYOopYMk24xROU4EhR\nteswwFuHAgMBAAECggEABZTqNvKydzQ0rgR5N9WR4ReMRwJqHbznRrl7rC8/S8rJ\nv2tNNJ+tZ03tp4e6tfU0gUIualYcSqcSuVmi5hiB6on7IxcTNUsstgoyBzQBLsjO\n7AKVUb3CbSxcX4hgeiin9DuJ4yJhrZPbLfizXze8vjWMVimRMBPbXtYyPGA7sO9P\n9QiUSG/luXr/kLNg8fMmFLqIxuSB1rMqSqNzpFroc1t0jcinR6F71tP7A2iZmaka\nlCfU1doeDKwjXT+k0lO2K4QbN0NeC7iYDbNTggLdDgrKVrWjeudCH3AwWEl1/CMO\n3uhQYD6P7g2SaIVTGCRkw3yFOO7qi8vXRl3Weg47cQKBgQD14uqHNZ3g2tuxUnFy\nKy0WYBv/md60RZP/b3JT9swmr3ts/YFF6sDZMQG3fCki7MWf+z5e75VYW1FyYJAm\nKIR2ja6gmojwoteJ0oZv0NHBk4L7UYZXvx+k8sVKPf35ptatmsTpu2LH7qXHNe1H\nWOHNxPUreAgH3+SEzi3nfn61RQKBgQC5a6ys3PDz0TCiTyA91a/ob/Fb1HY1Tjfh\nwc1TNCVvIanJX5VqLGIETbxX61O2cfgLm1E8mO3t+VeKHBvEuQTgJkHDjgNfyGCD\nzOogyPBi2pMv3vpBotjmJ1/LcHgUjjc+PZRFA0/20N2YLZx3POrx7w8uCWIgjow0\n59kr1478WwKBgHnruj6w50fHPYf/SSFDJ2gg38Etmq/okCnoKNhZV4EXIiw4xxDU\nBiurkR5aAku++38IJTUNtw/It+nu14sULBpcxmn8NkqbdCRyrxZihJ9ndVsIYYTA\n0AAKIKlfc7+GaoxKYblDoQdh3fGZW7405EITlz2mltTQv47abQiMQGfBAoGAclXv\nGHj1K6Om9a8NFpQZ8J52mkWczqn404EJ93CEVM7RP5dtLxdHKZg1t5EpAautZJrV\nsSQsMz45uLQ0e04Lr5xnmQqNEhchTKSjCqxdbteRQ0ef0bF1Rhapf21O3n4DmqGm\nOBgeyvdobVpSzUQHLEBZf+3RUHoWAtmklOBLD1kCgYBfq8kuTx17m53we2WrjtO3\nQ6WG+7EgJgPz+z4+1xbVjujNMK8hNzNNYvZr4ewL8+gb/P69iatZjhUFFDMWxVxx\n1WjpPFJroJ4shFeJupW/HHZbxXzDpRAhsCS5QbuffB/DwoVw/05Mup1I17FMvVzQ\n7irqr8xxeahqnGviqN2Cpw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "business-cloud-storage@sylvan-overview-330520.iam.gserviceaccount.com",
+  "client_id": "105847418211474633916",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/business-cloud-storage%40sylvan-overview-330520.iam.gserviceaccount.com"
+}
