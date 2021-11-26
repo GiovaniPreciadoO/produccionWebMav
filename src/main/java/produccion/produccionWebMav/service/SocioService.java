@@ -2,10 +2,7 @@ package produccion.produccionWebMav.service;
 
 import com.google.auth.Credentials;
 import com.google.auth.oauth2.GoogleCredentials;
-import com.google.cloud.storage.BlobId;
-import com.google.cloud.storage.BlobInfo;
-import com.google.cloud.storage.Storage;
-import com.google.cloud.storage.StorageOptions;
+import com.google.cloud.storage.*;
 import org.springframework.stereotype.Service;
 import produccion.produccionWebMav.dto.SocioDto;
 import produccion.produccionWebMav.entity.Socio;
@@ -15,6 +12,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Base64;
+import java.util.Optional;
 
 @Service
 public class SocioService {
@@ -22,7 +20,7 @@ public class SocioService {
     private final SocioRepository socioRepository;
     private final Storage storage;
 
-    private final String BUCKET = "business_bucket";
+    private final String BUCKED = "business_bucket";
     private final String projectId = "business-cloud-storage";
 
     public SocioService(SocioRepository socioRepository) {
@@ -36,8 +34,11 @@ public class SocioService {
             e.printStackTrace();
         }
 
-        this.storage = StorageOptions.newBuilder().setCredentials(credentials)
-                .setProjectId(projectId).build().getService();
+        this.storage = StorageOptions.newBuilder()
+                .setCredentials(credentials)
+                .setProjectId(projectId)
+                .build()
+                .getService();
 
 
         //this.storage = StorageOptions.getDefaultInstance().getService();
@@ -71,9 +72,17 @@ public class SocioService {
 
     }
 
+    public Socio findById(Integer id){
+
+        Optional<Socio> optionalSocio = socioRepository.findById(id);
+
+        return optionalSocio.orElse(null);
+
+    }
+
     private String saveBucket(SocioDto dto){
 
-        BlobId id = BlobId.of(BUCKET, dto.getNombre() + ".jpg");
+        BlobId id = BlobId.of(BUCKED, dto.getNombre());
         BlobInfo info = BlobInfo.newBuilder(id).build();
 
         byte[] decode = Base64.getDecoder().decode(dto.getContentImage());

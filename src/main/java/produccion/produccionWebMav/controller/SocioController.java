@@ -23,4 +23,9 @@ public class SocioController {
         return new ResponseEntity(socioId, HttpStatus.CREATED);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<String> findById(@PathVariable("id") Integer id){
+        return new ResponseEntity(service.findById(id), HttpStatus.OK);
+    }
+
 }
